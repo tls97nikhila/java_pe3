@@ -16,7 +16,7 @@ public class DiscardVowels {
                     for (int i = 0; i < buffer.length(); i++) {
 
                         if (arraylist.contains(buffer.charAt(i))) {
-                            buffer.replace(i, i + 1, "");
+                            buffer.replace(i, i + 1, ""); // replace with empty
                             i--;
                         }
                     }

@@ -18,18 +18,28 @@ public class ConsecutiveCheckTest {
 
     }
     @Test
-    public void testgivenNonConsNumbersShouldReturn() {
-        String result=obj.checkconsecutive("7,6,3,2,1");
-        assertEquals("Non consecutive numbers",result);
+    public void checkNonConsecutive() { //checks whether the result matches the expected output
+
+        boolean actual = obj.checkConsecutive("-97,-96,-95,-94,-93,-92");
+
+        assertTrue(actual);
     }
+
     @Test
-    public void consectest2() {
-        String result=obj.checkconsecutive("54,53,52,51,50,49,48");
-        assertEquals("consecutive numbers",result);
+    public void checkConsecutiveOne() { //checks whether the result matches the expected output
+
+        boolean actual = obj.checkConsecutive("54,53,52,51,50,49,48");
+
+        assertTrue(actual);
     }
-    @Test(expected = NumberFormatException.class)
-    public void consectest3() {
-        String result=obj.checkconsecutive("a,b,c,d,e,f");
+
+    @Test
+    public void checkNonConsecutiveTwo() { //checks whether the result matches the expected output
+
+        boolean actual = obj.checkConsecutive("1,2,3,4,5,6,6");
+
+        assertFalse(actual);
     }
 
 }
+

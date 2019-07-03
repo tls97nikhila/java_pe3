@@ -5,33 +5,20 @@ package com.stackroute.pe3;
 
 public class ConsecutiveCheck {
 
-    public String checkconsecutive(String input) {
+        public boolean checkConsecutive(String values) {
+            boolean result = false;
+            String[] integerArray = values.split(","); //splits the string and stores it in an integer array
+            for (int i = 0; i < integerArray.length - 1; i++) {
+                int difference = Integer.parseInt(integerArray[i + 1]) - Integer.parseInt(integerArray[i]); //calculates the difference between two values
 
-        String str[]=input.split(",");
-        int num[]=new int[str.length];
-        for(int i=0;i<str.length;i++)
-        {
-            num[i]=Integer.parseInt(str[i]);
-        }
-
-        int count=1;
-        for(int i=0;i<num.length-1;i++)
-        {
-            if(num[i]==num[i+1]+1)
-            {
-                count++;
+                if (difference == 1 || difference == -1) { //checks whether their is a difference of 1 or more
+                    result = true;
+                } else {
+                    result = false;
+                    break;
+                }
             }
-
+            return result; //returns the boolean value
         }
-        if(count==num.length)
-        {
-            return ("consecutive numbers");
-        }
-        else
-        {
-            return("Non consecutive numbers");
-        }
-
-    }
 }
 

@@ -10,14 +10,12 @@ import java.util.Calendar;
             // Get calendar set to current date and time
             Calendar calendar = Calendar.getInstance();
 
-            calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+            calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY); // set to momday
             String pattern = "EEE dd/MM/yyyy";
             SimpleDateFormat f = new SimpleDateFormat(pattern);
             String firstday = f.format(calendar.getTime());
-            for (int i = 0; i < 6; i++) {
-                calendar.add(Calendar.DATE, 1);
+                calendar.add(Calendar.DATE, 6);
 
-            }
             String lastday = f.format(calendar.getTime());
             System.out.println(firstday + lastday);
             return firstday + lastday;

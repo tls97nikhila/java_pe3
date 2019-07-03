@@ -6,11 +6,11 @@ public class StudentMarks {
         for (int i = 0; i < len; i++) {
             try {
                 if (grades[i] > 100 || grades[i] < 0) {
-                    throw new Exception("Not Between 1 to 100");
+                    throw new Exception("Not Between 1 to 100"); // out of bounds message
                 }
 
             } catch (Exception exception) {
-                return exception.getMessage();
+                return exception.getMessage(); // message
             }
         }
         return "Passed";

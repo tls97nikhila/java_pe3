@@ -22,20 +22,20 @@ public class StudentMarksTest {
     {
         double array[]= {90,77,108,61,57};
         String result=obj.checkgrade(array);
-        assertEquals("Not Between 1 to 100",result);
+        assertEquals("Not Between 1 to 100",result); // invalid input test case
     }
 
     @Test
     public void testgivenArrayShouldReturnPassed()
     {
-        double array[]= {27,73,66,38,52};
+        double array[]= {27,73,66,38,52}; // pass test case
         String result=obj.checkgrade(array);
         assertEquals("Passed",result);
     }
     @Test
     public void testgivenArrayShouldEvaluateDouble()
     {
-        double array[]= {27.5,73.4,66.3,38.4,52.3};
+        double array[]= {27.5,73.4,66.3,38.4,52.3}; // for double values
         String result=obj.checkgrade(array);
         assertEquals("Passed",result);
     }

@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class FirstnLastDateTest {
 
-    public class FirstAndLastDayTest {
+
         FirstnLastDate obj;
         @Before
         public void setUp()
@@ -30,6 +30,4 @@ public class FirstnLastDateTest {
         }
 
     }
-
-
-}
+    

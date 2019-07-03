@@ -24,11 +24,11 @@ public class DiscardVowelsTest {
         {
 
             String result=obj.remove("stack");
-            assertEquals("stck",result);
+            assertEquals("stck",result);   // positive test case
 
         }
         @Test(expected = NullPointerException.class)
-        public void testgivenNullShouldReturnNull()
+        public void testgivenNullShouldReturnNull()  // null pointer exception
         {
 
             String result=obj.remove(null);
@@ -39,7 +39,7 @@ public class DiscardVowelsTest {
         public void testgivenStringWithoutVowelShouldReturnSameString()
         {
             String result=obj.remove("rhythm");
-            assertEquals("rhythm",result);
+            assertEquals("rhythm",result); // test case without any vowels in it
 
         }
 

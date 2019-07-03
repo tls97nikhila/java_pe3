@@ -2,16 +2,47 @@ package com.stackroute.pe3;
 
 public class ChessBoard {
 
-        public  static String displayChess() {
-            String string= "";
+    //this function returns a square chess board
+    public String[][] chessBoard(int row, int column) {
 
-            for(int i = 0; i < 8; ++i) {
-                if (i % 2 == 0) {
-                    string = string + "WW|BB|WW|BB|WW|BB|WW|BB|\n";
-                } else {
-                    string = string + "BB|WW|BB|WW|BB|WW|BB|WW|\n";
-                }
+        String[][] chess = new String[row][column];
+
+        for(int i=0; i<row; i=i+2){  //runs for even rows
+
+            for(int j=0;j<column; j+=2) { //runs for even columns
+                chess[i][j] = "WW|";
             }
-            return string;
+
+            for(int k=1;k<column; k+=2) { //runs for odd columns
+                chess[i][k] = "BB|";
+            }
+
         }
+
+        for(int i=1; i<row; i=i+2){  //runs for odd rows
+
+            for(int j=0;j<column; j+=2) { //runs for even columns
+                chess[i][j] = "BB|";
+            }
+
+            for(int k=1;k<column; k+=2) { //runs for odd columns
+                chess[i][k] = "WW|";
+            }
+
+        }
+
+        return chess; //returns the chess board
+
+
+    }
+
+    //this functions checks whether the number of rows is same as that of the number of columns
+    boolean checkRowColumn(int row, int column) {
+        if(row == column)
+            return  true;
+        else
+            return false;
+    }
+
 }
+

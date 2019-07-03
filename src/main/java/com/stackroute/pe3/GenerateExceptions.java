@@ -27,7 +27,7 @@ public class GenerateExceptions {
         String value = null;
         try {
             if (value.equals("abc")) {
-                System.out.print(value);
+                System.out.print(value); // nul pointer exception
             }
 
         } catch (Exception e) {
